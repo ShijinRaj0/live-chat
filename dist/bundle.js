@@ -16249,13 +16249,43 @@ function App() {
         sessionId: sessionKey
       });
     } else {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h5", null, "Sender : ", senderId), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "row justify-content-center align-items-center my-5"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "col-12 col-md-6 col-lg-4"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "row bg-white chat-title shadow-sm p-3 border-bottom"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "welcomeHeading blue"
+      }, "Live ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("span", {
+        className: "yellow"
+      }, "Chat"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "row shadow-sm"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "chatbox bg-white bg-light pt-3 pb-3",
+        id: "chatOutput"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "chat-label"
+      }, "Sender"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", {
+        className: "chat-input shadow-sm",
+        type: "text",
+        placeholder: "Sender ID",
         onChange: updateUserId
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("h5", null, "Session : ", sessionKey), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "chat-label mt-3"
+      }, "Session"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", {
+        className: "chat-input shadow-sm",
+        type: "text",
+        placeholder: "Session ID",
         onChange: updateSessionKey
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", {
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "d-flex justify-content-center my-5"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", {
+        className: "btn btn-primary shadow-sm",
         onClick: startConversation
-      }, "Start Conversation"));
+      }, "Start Conversation"))))))));
     }
   }
 
@@ -16502,7 +16532,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".chatbox {\r\n    height: 60vh;\r\n    scroll-behavior: smooth;\r\n    overflow-y: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.chat-title {\r\n    border-radius: 20px;\r\n    border-bottom-right-radius: 0px;\r\n    border-bottom-left-radius: 0px;\r\n}\r\n\r\n.conversation {\r\n    overflow-wrap: anywhere;\r\n    color: black;\r\n    max-width: 90%;\r\n    border-radius: 30px;\r\n}\r\n\r\n.reply {\r\n    align-self: flex-start;\r\n    border-top-left-radius: 0px;\r\n    background: rgb(92 92 75);\r\n}\r\n\r\n.send {\r\n    align-self: flex-end;\r\n    border-bottom-right-radius: 0px;\r\n    background: lightyellow;\r\n}\r\n\r\n.chatbox::-webkit-scrollbar {\r\n    display: none;\r\n    /* Safari and Chrome */\r\n}\r\n\r\n.chat-input {\r\n    border: none;\r\n    width: 100%;\r\n    padding: 20px;\r\n    outline: none;\r\n    border-radius: 20px;\r\n    border-top-right-radius: 0px;\r\n    border-top-left-radius: 0px;\r\n}\r\n.blue {\r\ncolor: #004e95;\r\n}\r\n.welcomeHeading {\r\n/* font-size: 64px; */\r\nfont-size: 18px;\r\nfont-weight: 900;\r\ntext-align: center;\r\n}\r\n.yellow {\r\ncolor: #faa519;\r\n}\r\n.timestamp{\r\n    color: rgba(255, 255, 255, 0.8);\r\n    font-size: 14px;\r\n    font-style: italic;\r\n}\r\n.conv-user{\r\n    font-weight: 700;\r\n    font-size: 14px;\r\n    text-transform: capitalize;\r\n}", "",{"version":3,"sources":["webpack://./src/components/ChatWindow/index.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,uBAAuB;IACvB,gBAAgB;IAChB,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,mBAAmB;IACnB,+BAA+B;IAC/B,8BAA8B;AAClC;;AAEA;IACI,uBAAuB;IACvB,YAAY;IACZ,cAAc;IACd,mBAAmB;AACvB;;AAEA;IACI,sBAAsB;IACtB,2BAA2B;IAC3B,yBAAyB;AAC7B;;AAEA;IACI,oBAAoB;IACpB,+BAA+B;IAC/B,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,aAAa;IACb,aAAa;IACb,mBAAmB;IACnB,4BAA4B;IAC5B,2BAA2B;AAC/B;AACA;AACA,cAAc;AACd;AACA;AACA,qBAAqB;AACrB,eAAe;AACf,gBAAgB;AAChB,kBAAkB;AAClB;AACA;AACA,cAAc;AACd;AACA;IACI,+BAA+B;IAC/B,eAAe;IACf,kBAAkB;AACtB;AACA;IACI,gBAAgB;IAChB,eAAe;IACf,0BAA0B;AAC9B","sourcesContent":[".chatbox {\r\n    height: 60vh;\r\n    scroll-behavior: smooth;\r\n    overflow-y: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.chat-title {\r\n    border-radius: 20px;\r\n    border-bottom-right-radius: 0px;\r\n    border-bottom-left-radius: 0px;\r\n}\r\n\r\n.conversation {\r\n    overflow-wrap: anywhere;\r\n    color: black;\r\n    max-width: 90%;\r\n    border-radius: 30px;\r\n}\r\n\r\n.reply {\r\n    align-self: flex-start;\r\n    border-top-left-radius: 0px;\r\n    background: rgb(92 92 75);\r\n}\r\n\r\n.send {\r\n    align-self: flex-end;\r\n    border-bottom-right-radius: 0px;\r\n    background: lightyellow;\r\n}\r\n\r\n.chatbox::-webkit-scrollbar {\r\n    display: none;\r\n    /* Safari and Chrome */\r\n}\r\n\r\n.chat-input {\r\n    border: none;\r\n    width: 100%;\r\n    padding: 20px;\r\n    outline: none;\r\n    border-radius: 20px;\r\n    border-top-right-radius: 0px;\r\n    border-top-left-radius: 0px;\r\n}\r\n.blue {\r\ncolor: #004e95;\r\n}\r\n.welcomeHeading {\r\n/* font-size: 64px; */\r\nfont-size: 18px;\r\nfont-weight: 900;\r\ntext-align: center;\r\n}\r\n.yellow {\r\ncolor: #faa519;\r\n}\r\n.timestamp{\r\n    color: rgba(255, 255, 255, 0.8);\r\n    font-size: 14px;\r\n    font-style: italic;\r\n}\r\n.conv-user{\r\n    font-weight: 700;\r\n    font-size: 14px;\r\n    text-transform: capitalize;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".chatbox {\r\n    height: 60vh;\r\n    scroll-behavior: smooth;\r\n    overflow-y: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.chat-title {\r\n    border-radius: 20px;\r\n    border-bottom-right-radius: 0px;\r\n    border-bottom-left-radius: 0px;\r\n}\r\n\r\n.conversation {\r\n    overflow-wrap: anywhere;\r\n    color: black;\r\n    max-width: 90%;\r\n    border-radius: 30px;\r\n}\r\n\r\n.reply {\r\n    align-self: flex-start;\r\n    border-top-left-radius: 0px;\r\n    background: rgb(92 92 75);\r\n}\r\n\r\n.send {\r\n    align-self: flex-end;\r\n    border-bottom-right-radius: 0px;\r\n    background: lightyellow;\r\n}\r\n\r\n.chatbox::-webkit-scrollbar {\r\n    display: none;\r\n    /* Safari and Chrome */\r\n}\r\n\r\n.chat-input {\r\n    border: none;\r\n    width: 100%;\r\n    padding: 20px;\r\n    outline: none;\r\n    border-radius: 20px;\r\n    border-top-right-radius: 0px;\r\n    border-top-left-radius: 0px;\r\n}\r\n.blue {\r\ncolor: #004e95;\r\n}\r\n.welcomeHeading {\r\n/* font-size: 64px; */\r\nfont-size: 18px;\r\nfont-weight: 900;\r\ntext-align: center;\r\n}\r\n.yellow {\r\ncolor: #faa519;\r\n}\r\n.timestamp{\r\n    color: rgba(255, 255, 255, 0.8);\r\n    font-size: 14px;\r\n    font-style: italic;\r\n}\r\n.conv-user{\r\n    font-weight: 700;\r\n    font-size: 14px;\r\n    text-transform: capitalize;\r\n}\r\n\r\n.chat-label{\r\n    font-size: 13px;\r\n    font-weight: 500;\r\n    padding-left: 20px;\r\n    color: #004e95;\r\n}", "",{"version":3,"sources":["webpack://./src/components/ChatWindow/index.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,uBAAuB;IACvB,gBAAgB;IAChB,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,mBAAmB;IACnB,+BAA+B;IAC/B,8BAA8B;AAClC;;AAEA;IACI,uBAAuB;IACvB,YAAY;IACZ,cAAc;IACd,mBAAmB;AACvB;;AAEA;IACI,sBAAsB;IACtB,2BAA2B;IAC3B,yBAAyB;AAC7B;;AAEA;IACI,oBAAoB;IACpB,+BAA+B;IAC/B,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,aAAa;IACb,aAAa;IACb,mBAAmB;IACnB,4BAA4B;IAC5B,2BAA2B;AAC/B;AACA;AACA,cAAc;AACd;AACA;AACA,qBAAqB;AACrB,eAAe;AACf,gBAAgB;AAChB,kBAAkB;AAClB;AACA;AACA,cAAc;AACd;AACA;IACI,+BAA+B;IAC/B,eAAe;IACf,kBAAkB;AACtB;AACA;IACI,gBAAgB;IAChB,eAAe;IACf,0BAA0B;AAC9B;;AAEA;IACI,eAAe;IACf,gBAAgB;IAChB,kBAAkB;IAClB,cAAc;AAClB","sourcesContent":[".chatbox {\r\n    height: 60vh;\r\n    scroll-behavior: smooth;\r\n    overflow-y: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.chat-title {\r\n    border-radius: 20px;\r\n    border-bottom-right-radius: 0px;\r\n    border-bottom-left-radius: 0px;\r\n}\r\n\r\n.conversation {\r\n    overflow-wrap: anywhere;\r\n    color: black;\r\n    max-width: 90%;\r\n    border-radius: 30px;\r\n}\r\n\r\n.reply {\r\n    align-self: flex-start;\r\n    border-top-left-radius: 0px;\r\n    background: rgb(92 92 75);\r\n}\r\n\r\n.send {\r\n    align-self: flex-end;\r\n    border-bottom-right-radius: 0px;\r\n    background: lightyellow;\r\n}\r\n\r\n.chatbox::-webkit-scrollbar {\r\n    display: none;\r\n    /* Safari and Chrome */\r\n}\r\n\r\n.chat-input {\r\n    border: none;\r\n    width: 100%;\r\n    padding: 20px;\r\n    outline: none;\r\n    border-radius: 20px;\r\n    border-top-right-radius: 0px;\r\n    border-top-left-radius: 0px;\r\n}\r\n.blue {\r\ncolor: #004e95;\r\n}\r\n.welcomeHeading {\r\n/* font-size: 64px; */\r\nfont-size: 18px;\r\nfont-weight: 900;\r\ntext-align: center;\r\n}\r\n.yellow {\r\ncolor: #faa519;\r\n}\r\n.timestamp{\r\n    color: rgba(255, 255, 255, 0.8);\r\n    font-size: 14px;\r\n    font-style: italic;\r\n}\r\n.conv-user{\r\n    font-weight: 700;\r\n    font-size: 14px;\r\n    text-transform: capitalize;\r\n}\r\n\r\n.chat-label{\r\n    font-size: 13px;\r\n    font-weight: 500;\r\n    padding-left: 20px;\r\n    color: #004e95;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16639,7 +16669,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    background: #040022c7;\r\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;AACzB","sourcesContent":["body{\r\n    background: #040022c7;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
