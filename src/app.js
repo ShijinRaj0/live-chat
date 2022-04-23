@@ -1,5 +1,8 @@
 import { trim } from "lodash";
 import React, { useState, useEffect } from "react";
+import logo from "./public/icons/chat.png";
+import keyIcon from "./public/icons/key-chain.png";
+import userIcon from "./public/icons/profile.png";
 
 import ChatWindow from "./components/ChatWindow";
 
@@ -36,38 +39,58 @@ function App() {
       return (
         <div className="container">
           <div className="row justify-content-center align-items-center my-5">
-            <div className="col-12 col-md-6 col-lg-4">
-              <div className="row bg-white chat-title shadow-sm p-3 border-bottom">
+            <div className="col-12 col-md-6 col-lg-6">
+              <div className="row chat-title py-4">
                 <div className="welcomeHeading blue">
-                  Live <span className="yellow">Chat</span>
+                  <img
+                    style={{ width: "32px", height: "32px" }}
+                    src={logo}
+                    alt="img"
+                  />
+                  <span className="mx-2">Live Chat</span>
                 </div>
               </div>
-              <div className="row shadow-sm">
-                <div
-                  className="chatbox bg-white bg-light pt-3 pb-3"
-                  id="chatOutput"
-                >
+              <div className="row">
+                <div>
                   <div>
-                    <div className="chat-label">Sender</div>
-                    <input
-                      className="chat-input shadow-sm"
-                      type="text"
-                      placeholder="Sender ID"
-                      onChange={updateUserId}
-                    />
-                    <div className="chat-label mt-3">Session</div>
-                    <input
-                      className="chat-input shadow-sm"
-                      type="text"
-                      placeholder="Session ID"
-                      onChange={updateSessionKey}
-                    />
+                    <div className="mt-3 px-5">
+                      <div className="chat-label position-absolute ph-mt">
+                        <img
+                          style={{ width: "24px", height: "24px" }}
+                          src={userIcon}
+                          alt="img"
+                        />
+                        <span className="ph-text">Sender</span>
+                      </div>
+                      <input
+                        className="chat-input pl-max"
+                        type="text"
+                        onChange={updateUserId}
+                      />
+                    </div>
+                    <div className="mt-3 px-5">
+                      <div className="chat-label position-absolute ph-mt">
+                        <img
+                          style={{ width: "24px", height: "24px" }}
+                          src={keyIcon}
+                          alt="img"
+                        />
+                        <span className="ph-text">Room Key</span>
+                      </div>
+                      <input
+                        className="chat-input pl-max"
+                        type="text"
+                        onChange={updateSessionKey}
+                      />
+                    </div>
                     <br />
-                    <div className="d-flex justify-content-center my-5">
-                    <button className="btn btn-primary shadow-sm" onClick={startConversation}>
-                      Start Conversation
-                    </button>
-
+                    <div className="d-flex justify-content-center mb-5">
+                      <button
+                        className="btn"
+                        onClick={startConversation}
+                      >
+                        Join
+                      </button>
                     </div>
                   </div>
                 </div>

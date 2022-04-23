@@ -16182,7 +16182,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _components_ChatWindow__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/ChatWindow */ "./src/components/ChatWindow/index.js");
+/* harmony import */ var _public_icons_chat_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./public/icons/chat.png */ "./src/public/icons/chat.png");
+/* harmony import */ var _public_icons_key_chain_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./public/icons/key-chain.png */ "./src/public/icons/key-chain.png");
+/* harmony import */ var _public_icons_profile_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./public/icons/profile.png */ "./src/public/icons/profile.png");
+/* harmony import */ var _components_ChatWindow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/ChatWindow */ "./src/components/ChatWindow/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -16194,6 +16197,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
 
 
 
@@ -16244,7 +16250,7 @@ function App() {
 
   function renderChatWindow() {
     if (senderId != "" && sessionKey != "") {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_ChatWindow__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_components_ChatWindow__WEBPACK_IMPORTED_MODULE_5__["default"], {
         senderId: senderId,
         sessionId: sessionKey
       });
@@ -16254,38 +16260,62 @@ function App() {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
         className: "row justify-content-center align-items-center my-5"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-        className: "col-12 col-md-6 col-lg-4"
+        className: "col-12 col-md-6 col-lg-6"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-        className: "row bg-white chat-title shadow-sm p-3 border-bottom"
+        className: "row chat-title py-4"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
         className: "welcomeHeading blue"
-      }, "Live ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("span", {
-        className: "yellow"
-      }, "Chat"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-        className: "row shadow-sm"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
+        style: {
+          width: "32px",
+          height: "32px"
+        },
+        src: _public_icons_chat_png__WEBPACK_IMPORTED_MODULE_2__,
+        alt: "img"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("span", {
+        className: "mx-2"
+      }, "Live Chat"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "mt-3 px-5"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-        className: "chatbox bg-white bg-light pt-3 pb-3",
-        id: "chatOutput"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-        className: "chat-label"
-      }, "Sender"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", {
-        className: "chat-input shadow-sm",
+        className: "chat-label position-absolute ph-mt"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
+        style: {
+          width: "24px",
+          height: "24px"
+        },
+        src: _public_icons_profile_png__WEBPACK_IMPORTED_MODULE_4__,
+        alt: "img"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("span", {
+        className: "ph-text"
+      }, "Sender")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", {
+        className: "chat-input pl-max",
         type: "text",
-        placeholder: "Sender ID",
         onChange: updateUserId
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-        className: "chat-label mt-3"
-      }, "Session"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", {
-        className: "chat-input shadow-sm",
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "mt-3 px-5"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "chat-label position-absolute ph-mt"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", {
+        style: {
+          width: "24px",
+          height: "24px"
+        },
+        src: _public_icons_key_chain_png__WEBPACK_IMPORTED_MODULE_3__,
+        alt: "img"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("span", {
+        className: "ph-text"
+      }, "Room Key")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", {
+        className: "chat-input pl-max",
         type: "text",
-        placeholder: "Session ID",
         onChange: updateSessionKey
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
-        className: "d-flex justify-content-center my-5"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", {
+        className: "d-flex justify-content-center mb-5"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", {
-        className: "btn btn-primary shadow-sm",
+        className: "btn",
         onClick: startConversation
-      }, "Start Conversation"))))))));
+      }, "Join"))))))));
     }
   }
 
@@ -16462,7 +16492,7 @@ function Message(params) {
   var datetime = formatTimestamp(timestamp);
   scrollToBottom();
 
-  if (type == 'reply') {
+  if (type == "reply") {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "conversation mb-1 mt-2 border shadow-sm px-3 py-2 reply border-1 text-light"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -16470,7 +16500,7 @@ function Message(params) {
     }, senderId, " "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, text), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "timestamp"
     }, datetime));
-  } else if (type == 'send') {
+  } else if (type == "send") {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "conversation mb-1 mt-2 border shadow-sm px-3 py-2 send border-2"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -16489,16 +16519,16 @@ function formatTimestamp(timestamp) {
   var now = new Date();
 
   if (now.getDate() == timeStamp.getDate() && now.getMonth() == timeStamp.getMonth() && now.getFullYear() == timeStamp.getFullYear()) {
-    result = "Today, " + timeStamp.toLocaleString('en-IN', {
-      hour: '2-digit',
-      hour12: true,
-      minute: '2-digit'
-    });
-  } else {
-    result = timeStamp.toLocaleDateString('en-IN') + " " + timeStamp.toLocaleTimeString('en-IN', {
+    result = "Today, " + timeStamp.toLocaleString("en-IN", {
       hour: "2-digit",
       hour12: true,
-      minute: '2-digit'
+      minute: "2-digit"
+    });
+  } else {
+    result = timeStamp.toLocaleDateString("en-IN") + " " + timeStamp.toLocaleTimeString("en-IN", {
+      hour: "2-digit",
+      hour12: true,
+      minute: "2-digit"
     });
   }
 
@@ -16532,7 +16562,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".chatbox {\r\n    height: 60vh;\r\n    scroll-behavior: smooth;\r\n    overflow-y: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.chat-title {\r\n    border-radius: 20px;\r\n    border-bottom-right-radius: 0px;\r\n    border-bottom-left-radius: 0px;\r\n}\r\n\r\n.conversation {\r\n    overflow-wrap: anywhere;\r\n    color: black;\r\n    max-width: 90%;\r\n    border-radius: 30px;\r\n}\r\n\r\n.reply {\r\n    align-self: flex-start;\r\n    border-top-left-radius: 0px;\r\n    background: rgb(92 92 75);\r\n}\r\n\r\n.send {\r\n    align-self: flex-end;\r\n    border-bottom-right-radius: 0px;\r\n    background: lightyellow;\r\n}\r\n\r\n.chatbox::-webkit-scrollbar {\r\n    display: none;\r\n    /* Safari and Chrome */\r\n}\r\n\r\n.chat-input {\r\n    border: none;\r\n    width: 100%;\r\n    padding: 20px;\r\n    outline: none;\r\n    border-radius: 20px;\r\n    border-top-right-radius: 0px;\r\n    border-top-left-radius: 0px;\r\n}\r\n.blue {\r\ncolor: #004e95;\r\n}\r\n.welcomeHeading {\r\n/* font-size: 64px; */\r\nfont-size: 18px;\r\nfont-weight: 900;\r\ntext-align: center;\r\n}\r\n.yellow {\r\ncolor: #faa519;\r\n}\r\n.timestamp{\r\n    color: rgba(255, 255, 255, 0.8);\r\n    font-size: 14px;\r\n    font-style: italic;\r\n}\r\n.conv-user{\r\n    font-weight: 700;\r\n    font-size: 14px;\r\n    text-transform: capitalize;\r\n}\r\n\r\n.chat-label{\r\n    font-size: 13px;\r\n    font-weight: 500;\r\n    padding-left: 20px;\r\n    color: #004e95;\r\n}", "",{"version":3,"sources":["webpack://./src/components/ChatWindow/index.css"],"names":[],"mappings":"AAAA;IACI,YAAY;IACZ,uBAAuB;IACvB,gBAAgB;IAChB,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,mBAAmB;IACnB,+BAA+B;IAC/B,8BAA8B;AAClC;;AAEA;IACI,uBAAuB;IACvB,YAAY;IACZ,cAAc;IACd,mBAAmB;AACvB;;AAEA;IACI,sBAAsB;IACtB,2BAA2B;IAC3B,yBAAyB;AAC7B;;AAEA;IACI,oBAAoB;IACpB,+BAA+B;IAC/B,uBAAuB;AAC3B;;AAEA;IACI,aAAa;IACb,sBAAsB;AAC1B;;AAEA;IACI,YAAY;IACZ,WAAW;IACX,aAAa;IACb,aAAa;IACb,mBAAmB;IACnB,4BAA4B;IAC5B,2BAA2B;AAC/B;AACA;AACA,cAAc;AACd;AACA;AACA,qBAAqB;AACrB,eAAe;AACf,gBAAgB;AAChB,kBAAkB;AAClB;AACA;AACA,cAAc;AACd;AACA;IACI,+BAA+B;IAC/B,eAAe;IACf,kBAAkB;AACtB;AACA;IACI,gBAAgB;IAChB,eAAe;IACf,0BAA0B;AAC9B;;AAEA;IACI,eAAe;IACf,gBAAgB;IAChB,kBAAkB;IAClB,cAAc;AAClB","sourcesContent":[".chatbox {\r\n    height: 60vh;\r\n    scroll-behavior: smooth;\r\n    overflow-y: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.chat-title {\r\n    border-radius: 20px;\r\n    border-bottom-right-radius: 0px;\r\n    border-bottom-left-radius: 0px;\r\n}\r\n\r\n.conversation {\r\n    overflow-wrap: anywhere;\r\n    color: black;\r\n    max-width: 90%;\r\n    border-radius: 30px;\r\n}\r\n\r\n.reply {\r\n    align-self: flex-start;\r\n    border-top-left-radius: 0px;\r\n    background: rgb(92 92 75);\r\n}\r\n\r\n.send {\r\n    align-self: flex-end;\r\n    border-bottom-right-radius: 0px;\r\n    background: lightyellow;\r\n}\r\n\r\n.chatbox::-webkit-scrollbar {\r\n    display: none;\r\n    /* Safari and Chrome */\r\n}\r\n\r\n.chat-input {\r\n    border: none;\r\n    width: 100%;\r\n    padding: 20px;\r\n    outline: none;\r\n    border-radius: 20px;\r\n    border-top-right-radius: 0px;\r\n    border-top-left-radius: 0px;\r\n}\r\n.blue {\r\ncolor: #004e95;\r\n}\r\n.welcomeHeading {\r\n/* font-size: 64px; */\r\nfont-size: 18px;\r\nfont-weight: 900;\r\ntext-align: center;\r\n}\r\n.yellow {\r\ncolor: #faa519;\r\n}\r\n.timestamp{\r\n    color: rgba(255, 255, 255, 0.8);\r\n    font-size: 14px;\r\n    font-style: italic;\r\n}\r\n.conv-user{\r\n    font-weight: 700;\r\n    font-size: 14px;\r\n    text-transform: capitalize;\r\n}\r\n\r\n.chat-label{\r\n    font-size: 13px;\r\n    font-weight: 500;\r\n    padding-left: 20px;\r\n    color: #004e95;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".chatbox {\r\n  height: 60vh;\r\n  scroll-behavior: smooth;\r\n  overflow-y: auto;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.chat-title {\r\n  border-radius: 20px;\r\n  border-bottom-right-radius: 0px;\r\n  border-bottom-left-radius: 0px;\r\n}\r\n\r\n.conversation {\r\n  overflow-wrap: anywhere;\r\n  color: black;\r\n  max-width: 90%;\r\n  border-radius: 30px;\r\n}\r\n\r\n.reply {\r\n  align-self: flex-start;\r\n  border-top-left-radius: 0px;\r\n  background: rgb(92 92 75);\r\n}\r\n\r\n.send {\r\n  align-self: flex-end;\r\n  border-bottom-right-radius: 0px;\r\n  background: lightyellow;\r\n}\r\n\r\n.chatbox::-webkit-scrollbar {\r\n  display: none;\r\n  /* Safari and Chrome */\r\n}\r\n\r\n.chat-input {\r\n  border: none;\r\n  width: 100%;\r\n  padding: 20px;\r\n  outline: none;\r\n  border-radius: 20px;\r\n  border-top-right-radius: 0px;\r\n  border-top-left-radius: 0px;\r\n  transition: all 1s ease;\r\n  box-shadow: 0.125rem 0.25rem rgba(0, 0, 0, 0.075);\r\n}\r\n\r\n.chat-input:hover,\r\n:focus {\r\n  box-shadow: 0.125rem 0.25rem rgb(0 78 149 / 27%);\r\n}\r\n.blue {\r\n  color: #004e95;\r\n}\r\n.welcomeHeading {\r\n  /* font-size: 64px; */\r\n  font-size: 36px;\r\n  font-weight: 900;\r\n  text-align: center;\r\n}\r\n.yellow {\r\n  color: #faa519;\r\n}\r\n.timestamp {\r\n  color: rgba(255, 255, 255, 0.8);\r\n  font-size: 14px;\r\n  font-style: italic;\r\n}\r\n.conv-user {\r\n  font-weight: 700;\r\n  font-size: 14px;\r\n  text-transform: capitalize;\r\n}\r\n\r\n.chat-label {\r\n  font-size: 13px;\r\n  font-weight: 500;\r\n  padding: 5px;\r\n  margin-left: 15px;\r\n  margin-right: 15px;\r\n  color: #004e95;\r\n  border-right: 1px solid rgb(0 78 149 / 7%);\r\n  width: 9rem;\r\n}\r\n\r\n.pl-max {\r\n  padding-left: 180px !important;\r\n}\r\n\r\n.ph-text {\r\n  padding-right: 20px;\r\n  /* border-right: 1px solid rgb(0 78 149 / 7%); */\r\n  margin-left: 15px;\r\n}\r\n\r\n.ph-mt {\r\n  margin-top: 24px;\r\n}\r\n\r\n.btn-circle {\r\n  border-radius: 50px;\r\n  width: 100px;\r\n  height: 100px;\r\n  color: white;\r\n  background: linear-gradient(303deg, #2196f3, #64b5f6);\r\n  box-shadow: 0rem 0rem 0px 5px rgb(0 0 0 / 8%);\r\n  font-size: 13px;\r\n  font-weight: 500;\r\n}\r\n", "",{"version":3,"sources":["webpack://./src/components/ChatWindow/index.css"],"names":[],"mappings":"AAAA;EACE,YAAY;EACZ,uBAAuB;EACvB,gBAAgB;EAChB,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,mBAAmB;EACnB,+BAA+B;EAC/B,8BAA8B;AAChC;;AAEA;EACE,uBAAuB;EACvB,YAAY;EACZ,cAAc;EACd,mBAAmB;AACrB;;AAEA;EACE,sBAAsB;EACtB,2BAA2B;EAC3B,yBAAyB;AAC3B;;AAEA;EACE,oBAAoB;EACpB,+BAA+B;EAC/B,uBAAuB;AACzB;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,YAAY;EACZ,WAAW;EACX,aAAa;EACb,aAAa;EACb,mBAAmB;EACnB,4BAA4B;EAC5B,2BAA2B;EAC3B,uBAAuB;EACvB,iDAAiD;AACnD;;AAEA;;EAEE,gDAAgD;AAClD;AACA;EACE,cAAc;AAChB;AACA;EACE,qBAAqB;EACrB,eAAe;EACf,gBAAgB;EAChB,kBAAkB;AACpB;AACA;EACE,cAAc;AAChB;AACA;EACE,+BAA+B;EAC/B,eAAe;EACf,kBAAkB;AACpB;AACA;EACE,gBAAgB;EAChB,eAAe;EACf,0BAA0B;AAC5B;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,YAAY;EACZ,iBAAiB;EACjB,kBAAkB;EAClB,cAAc;EACd,0CAA0C;EAC1C,WAAW;AACb;;AAEA;EACE,8BAA8B;AAChC;;AAEA;EACE,mBAAmB;EACnB,gDAAgD;EAChD,iBAAiB;AACnB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,mBAAmB;EACnB,YAAY;EACZ,aAAa;EACb,YAAY;EACZ,qDAAqD;EACrD,6CAA6C;EAC7C,eAAe;EACf,gBAAgB;AAClB","sourcesContent":[".chatbox {\r\n  height: 60vh;\r\n  scroll-behavior: smooth;\r\n  overflow-y: auto;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.chat-title {\r\n  border-radius: 20px;\r\n  border-bottom-right-radius: 0px;\r\n  border-bottom-left-radius: 0px;\r\n}\r\n\r\n.conversation {\r\n  overflow-wrap: anywhere;\r\n  color: black;\r\n  max-width: 90%;\r\n  border-radius: 30px;\r\n}\r\n\r\n.reply {\r\n  align-self: flex-start;\r\n  border-top-left-radius: 0px;\r\n  background: rgb(92 92 75);\r\n}\r\n\r\n.send {\r\n  align-self: flex-end;\r\n  border-bottom-right-radius: 0px;\r\n  background: lightyellow;\r\n}\r\n\r\n.chatbox::-webkit-scrollbar {\r\n  display: none;\r\n  /* Safari and Chrome */\r\n}\r\n\r\n.chat-input {\r\n  border: none;\r\n  width: 100%;\r\n  padding: 20px;\r\n  outline: none;\r\n  border-radius: 20px;\r\n  border-top-right-radius: 0px;\r\n  border-top-left-radius: 0px;\r\n  transition: all 1s ease;\r\n  box-shadow: 0.125rem 0.25rem rgba(0, 0, 0, 0.075);\r\n}\r\n\r\n.chat-input:hover,\r\n:focus {\r\n  box-shadow: 0.125rem 0.25rem rgb(0 78 149 / 27%);\r\n}\r\n.blue {\r\n  color: #004e95;\r\n}\r\n.welcomeHeading {\r\n  /* font-size: 64px; */\r\n  font-size: 36px;\r\n  font-weight: 900;\r\n  text-align: center;\r\n}\r\n.yellow {\r\n  color: #faa519;\r\n}\r\n.timestamp {\r\n  color: rgba(255, 255, 255, 0.8);\r\n  font-size: 14px;\r\n  font-style: italic;\r\n}\r\n.conv-user {\r\n  font-weight: 700;\r\n  font-size: 14px;\r\n  text-transform: capitalize;\r\n}\r\n\r\n.chat-label {\r\n  font-size: 13px;\r\n  font-weight: 500;\r\n  padding: 5px;\r\n  margin-left: 15px;\r\n  margin-right: 15px;\r\n  color: #004e95;\r\n  border-right: 1px solid rgb(0 78 149 / 7%);\r\n  width: 9rem;\r\n}\r\n\r\n.pl-max {\r\n  padding-left: 180px !important;\r\n}\r\n\r\n.ph-text {\r\n  padding-right: 20px;\r\n  /* border-right: 1px solid rgb(0 78 149 / 7%); */\r\n  margin-left: 15px;\r\n}\r\n\r\n.ph-mt {\r\n  margin-top: 24px;\r\n}\r\n\r\n.btn-circle {\r\n  border-radius: 50px;\r\n  width: 100px;\r\n  height: 100px;\r\n  color: white;\r\n  background: linear-gradient(303deg, #2196f3, #64b5f6);\r\n  box-shadow: 0rem 0rem 0px 5px rgb(0 0 0 / 8%);\r\n  font-size: 13px;\r\n  font-weight: 500;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16669,7 +16699,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    background: #040022c7;\r\n}", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;IACI,qBAAqB;AACzB","sourcesContent":["body{\r\n    background: #040022c7;\r\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* body{\r\n    background: #040022c7;\r\n} */", "",{"version":3,"sources":["webpack://./src/style.css"],"names":[],"mappings":"AAAA;;GAEG","sourcesContent":["/* body{\r\n    background: #040022c7;\r\n} */"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -64820,6 +64850,39 @@ module.exports = __webpack_require__.p + "ac8d04b620e54be9b0f0.ttf";
 
 "use strict";
 module.exports = __webpack_require__.p + "59ff6a729e30c99b478e.ttf";
+
+/***/ }),
+
+/***/ "./src/public/icons/chat.png":
+/*!***********************************!*\
+  !*** ./src/public/icons/chat.png ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "6cf243b6c7def497c893.png";
+
+/***/ }),
+
+/***/ "./src/public/icons/key-chain.png":
+/*!****************************************!*\
+  !*** ./src/public/icons/key-chain.png ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "b0dafe413b72c551cbd2.png";
+
+/***/ }),
+
+/***/ "./src/public/icons/profile.png":
+/*!**************************************!*\
+  !*** ./src/public/icons/profile.png ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "5faf09a7795d28bf5a2b.png";
 
 /***/ }),
 
