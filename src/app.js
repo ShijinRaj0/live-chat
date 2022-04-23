@@ -83,10 +83,9 @@ function App() {
                         onChange={updateSessionKey}
                       />
                     </div>
-                    <br />
-                    <div className="d-flex justify-content-center mb-5">
+                    <div className="mt-4 px-5 d-flex justify-content-end">
                       <button
-                        className="btn"
+                        className="btn btn-block btn-light btn-start"
                         onClick={startConversation}
                       >
                         Join

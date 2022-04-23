@@ -100,13 +100,9 @@
   margin-top: 24px;
 }
 
-.btn-circle {
-  border-radius: 50px;
-  width: 100px;
-  height: 100px;
-  color: white;
-  background: linear-gradient(303deg, #2196f3, #64b5f6);
-  box-shadow: 0rem 0rem 0px 5px rgb(0 0 0 / 8%);
+.btn-start {
   font-size: 13px;
   font-weight: 500;
+  color: #004e95;
+  width: 120px;
 }
